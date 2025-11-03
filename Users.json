@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "8a2f",
+      "name": "maulik",
+      "email": "Maulik922010@gmail.com",
+      "password": "Maulik@1993",
+      "role": "Admin"
+    },
+    {
+      "id": "8779",
+      "name": "Shiv",
+      "email": "shiv@gmail.com",
+      "password": "shiv@123",
+      "role": "User"
+    },
+    {
+      "id": "ee29",
+      "name": "shivansh",
+      "email": "Shivansh@gmail.com",
+      "password": "shivansh@123",
+      "role": "User"
+    }
+  ]
+}
