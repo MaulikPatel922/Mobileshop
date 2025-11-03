@@ -9,6 +9,7 @@ function Brandvise() {
     const disbrndvise=Productslist.filter((product)=>{
         return product.brand.toLocaleLowerCase()===brandname.toLocaleLowerCase()
     })
+  
   return (
     <div className="max-w-7xl mx-auto p-4">
         <div className="flex items-center justify-between mb-4">

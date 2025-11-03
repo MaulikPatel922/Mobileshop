@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import About from './About'
 import Products from './Products'
 import Contact from './Contact'
+import Homeimage from '../../assets/Image/other/Homeimg.avif'
 
 
 function Home() {
@@ -30,7 +31,7 @@ function Home() {
         {/* Right side - Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src="/Image/Homeimg.avif"
+            src={Homeimage}
             alt="Mobile and Accessories"
             className="rounded-2xl shadow-lg"
           />

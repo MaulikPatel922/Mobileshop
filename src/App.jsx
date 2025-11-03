@@ -1,10 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
-import Admin from './Admin/Admin'
-import Aheader from './Admin/Aheader'
-import Product from './Admin/Products'
-import AdminDashboard from './Admin/Admin'
 import Header from './User/Components/Header'
 import Home from './User/Pages/Home'
 import About from './User/Pages/About'
@@ -57,9 +53,7 @@ useEffect(() => {
     <ToastContainer></ToastContainer>
       <BrowserRouter basename='/Mobileshop'>
       <provider.Provider value={{show,setShow,name,setName,showcart,setShowcart,cart,setCart,userdata,setUserdata,adminuser,setAdminuser}}>
-      {
-        adminuser ? <Aheader/>: <Header/>
-      }
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
@@ -70,9 +64,6 @@ useEffect(() => {
         <Route path='/products/brandvise/:brand' element={<Brandvise/>}></Route>
         <Route path='/singlepro/:id' element={<Singlepage/>}></Route>
         <Route path='/cart/payment' element={<PaymentPage/>}></Route>
-        <Route path='/admin' element={<Admin/>}></Route>
-        <Route path='/admin/products' element={<Product/>}></Route>
-        <Route path='/admin/dashboard' element={<AdminDashboard/>}></Route>
       </Routes>
         {showcart && (
         <Cart/>
