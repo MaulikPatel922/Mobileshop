@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { provider } from "../../App";
+import { ProviderContext } from "../../App";
 
 function Header() {
-  const { show, setShow, name, showcart, setShowcart, cart ,setCart} = useContext(provider); // 👉 add cart here
+  const { show, setShow, name, showcart, setShowcart, cart ,setCart} = useContext(ProviderContext); // 👉 add cart here
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleshowcart = () => {

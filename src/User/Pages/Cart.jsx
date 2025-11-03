@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { provider } from '../../App'
+import { ProviderContext } from '../../App'
 import { useNavigate } from 'react-router-dom'
 
 function Cart() {
-  const { cart, setCart ,name,show,setShowcart} = useContext(provider)
+  const { cart, setCart ,name,show,setShowcart} = useContext(ProviderContext)
   const navi=useNavigate()
 
   const incQuantity = (id) => {

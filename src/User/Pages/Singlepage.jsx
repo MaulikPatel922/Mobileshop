@@ -1,14 +1,14 @@
 import React, { useContext, useState } from 'react'
 import { Productslist } from '../../Productslist'
 import { Link, useParams } from 'react-router-dom'
-import { provider } from '../../App'
+import { ProviderContext } from '../../App'
 import { toast } from 'react-toastify'
 
 function Singlepage() {
     
 
     const { id } = useParams()
-    const {cart,setCart}=useContext(provider)
+    const {cart,setCart}=useContext(ProviderContext)
     const product = Productslist.find((p) => p.id.toLocaleString() === id)
 
       if (!product) {

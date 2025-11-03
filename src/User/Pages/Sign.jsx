@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { provider } from "../../App";
+import {ProviderContext } from "../../App";
 import { useNavigate } from "react-router-dom";
 
 function Sign() {
   const [password, setPassword] = useState("");
-  const { show, setShow, name, setName,userdata,setUserdata,adminuser,setAdminuser,setCart } = useContext(provider);
+  const { show, setShow, name, setName,userdata,setUserdata,adminuser,setAdminuser,setCart } = useContext(ProviderContext);
 
   const navi = useNavigate();
 
@@ -22,9 +22,7 @@ function Sign() {
     const loguser = userdata.find((user) => {
       return user.name === name && user.password === password && user.role === "User";
     });
-      const adminuser = userdata.find((user) => {
-      return user.name === name && user.password === password && user.role === "Admin";
-    });
+    
     if (loguser) {
       toast.success("Welcome 🎉", { autoClose: 1000 });
       localStorage.setItem("currentUser", loguser.name);
@@ -33,12 +31,6 @@ function Sign() {
       navi("/products");
 
     } 
-    else if(adminuser){
-      navi("/admin");
-      setAdminuser(true)
-      toast.success("Welcome Admin 🎉", { autoClose: 1000 });
-
-    }
     else {
       toast.error("Name or password is incorrect", { autoClose: 1000 });
       return;
