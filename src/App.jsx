@@ -55,7 +55,7 @@ useEffect(() => {
   return (
     <>
     <ToastContainer></ToastContainer>
-      <BrowserRouter>
+      <BrowserRouter basename='/Mobileshop'>
       <provider.Provider value={{show,setShow,name,setName,showcart,setShowcart,cart,setCart,userdata,setUserdata,adminuser,setAdminuser}}>
       {
         adminuser ? <Aheader/>: <Header/>
