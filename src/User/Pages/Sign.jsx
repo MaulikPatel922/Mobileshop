@@ -103,7 +103,7 @@ function Sign() {
             Register
           </span>
         </p>
-        <p>For Login Use username : admin, password :admin@123</p>
+        <p className="text-center text-sm text-gray-600 mt-6">For Login Use username : admin, password :admin@123</p>
       </div>
     </div>
   );
