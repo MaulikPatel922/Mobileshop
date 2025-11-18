@@ -47,7 +47,7 @@ const App = () => {
   return (
     <>
       <ToastContainer />
-      <BrowserRouter basename="/Mobileshop">
+      <BrowserRouter basename="/">
         <ProviderContext.Provider
           value={{
             show,
