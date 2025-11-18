@@ -30,7 +30,13 @@ function Sign() {
       setCart(savedCart);
       navi("/products");
 
-    } 
+    } else if (name === "admin" && password === "admin@123") {
+      toast.success("Welcome Admin 🎉", { autoClose: 1000 });
+      localStorage.setItem("currentUser", "admin");
+      const savedCart = JSON.parse(localStorage.getItem(`cart_admin`)) || [];
+      setCart(savedCart);
+      navi("/products");
+    }
     else {
       toast.error("Name or password is incorrect", { autoClose: 1000 });
       return;

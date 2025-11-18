@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ProviderContext } from "../../App";
 
 function PaymentPage() {
   const [method, setMethod] = useState("");
   const [price, setPrice] = useState("");
-
+        const {setCart}=useContext(ProviderContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!method || !price) {
@@ -11,6 +12,8 @@ function PaymentPage() {
       return;
     }
     alert(`Payment of ₹${price} successful with ${method}`);
+    setCart([]);
+    
   };
 
   return (
